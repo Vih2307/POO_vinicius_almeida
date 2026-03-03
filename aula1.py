@@ -2,7 +2,7 @@
 #     def __init__(self, nome, numero):
 #         self.nome = nome
 #         self.numero = numero
-        
+
 #     def status(self):
 #         return f"{self.nome} e {self.numero}"
 
@@ -15,16 +15,16 @@
 #     def __init__(self, nome, cor):
 #         self.nome = nome
 #         self.cor = cor
-        
+
 #     def falar(self):
 #         return f"Miau"
-    
+
 #     def comer(self):
 #         return f"Comeu ração"
-    
+
 #     def dormir(self):
 #         return f"Dormiu"
-    
+
 # meu_gato = Gato("Romeu", "Preto")
 
 # print(f"Meu gato faz {meu_gato.falar()} e agora ele {meu_gato.dormir()}")
@@ -35,7 +35,7 @@
 #         self.modelo = modelo
 #         self.cor = cor
 #         self.ano = ano
-    
+
 # veiculo1 = Veiculo("Subaru Impreza", "Azul", 2000)
 # print(f"""{veiculo1.modelo}
 # {veiculo1.cor}
@@ -43,15 +43,22 @@
 # """)
 
 
-# Cálculo de área
+# Cálculo de área de um retângulo
 class Objeto:
     def __init__(self, lado1, lado2):
         self.lado1 = lado1
         self.lado2 = lado2
-    
-    def area(self, lado1, lado2):
-        return lado1 * lado2
-        
-    
-print("Digite o lado 1 do retângulo")
-        
+
+    def area(self):
+        return self.lado1 * self.lado2
+
+
+print("Digite o lado 1 do retângulo: ")
+lado1 = float(input())
+
+print("Digite o lado 2 do retângulo: ")
+lado2 = float(input())
+
+retangulo = Objeto(lado1, lado2)
+
+print(f"A área do retângulo é {retangulo.area()}")
